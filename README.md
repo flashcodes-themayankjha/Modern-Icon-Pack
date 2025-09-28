@@ -7,21 +7,21 @@ A sleek and versatile collection of modern SVG icons designed for various web an
 You can install the Modern Icon Pack via npm:
 
 ```bash
-npm install modern-icon-pack
+npm install @mayankjha07/modern-icons
 ```
 
 ## Usage
 
-### React / Vite Projects
+### Main Icons (React / Vite Projects)
 
-For React and Vite projects, you can import individual icons as components.
+For React and Vite projects, you can import individual icons from the main pack as components:
 
 1.  **Import the desired icon:**
 
     ```javascript
-    import { Activity } from 'modern-icon-pack/react';
+    import { Activity } from '@mayankjha07/modern-icons';
     // Or for a specific icon:
-    // import { Camera } from 'modern-icon-pack/react';
+    // import { Camera } from '@mayankjha07/modern-icons';
     ```
 
 2.  **Use the icon as a component in your JSX:**
@@ -42,12 +42,60 @@ For React and Vite projects, you can import individual icons as components.
     *   `strokeWidth`: Adjusts the thickness of the icon's lines.
     *   Any other SVG attributes can also be passed as props.
 
+### Social Icons (React / Vite Projects)
+
+To use social icons, import them from the `social` sub-path:
+
+1.  **Import the desired social icon:**
+
+    ```javascript
+    import { Facebook } from '@mayankjha07/modern-icons/social';
+    // Or for a specific icon:
+    // import { Instagram } from '@mayankjha07/modern-icons/social';
+    ```
+
+2.  **Use the icon as a component in your JSX:**
+
+    ```jsx
+    function SocialComponent() {
+      return (
+        <div>
+          <Facebook size="24" color="#1877F2" />
+        </div>
+      );
+    }
+    ```
+
+### System Design Icons (React / Vite Projects)
+
+To use system design icons, import them from the `system-designs` sub-path:
+
+1.  **Import the desired system design icon:**
+
+    ```javascript
+    import { CloudConnection } from '@mayankjha07/modern-icons/system-designs';
+    // Or for a specific icon:
+    // import { ServerConnection } from '@mayankjha07/modern-icons/system-designs';
+    ```
+
+2.  **Use the icon as a component in your JSX:**
+
+    ```jsx
+    function SystemDesignComponent() {
+      return (
+        <div>
+          <CloudConnection size="24" color="purple" />
+        </div>
+      );
+    }
+    ```
+
 ### HTML Projects (Direct SVG)
 
-For plain HTML projects, you can directly embed the SVG code or link to the SVG files.
+For plain HTML projects, you can directly embed the SVG code or link to the SVG files. You can access the raw SVG files directly from the `icons`, `Social-icons`, and `System-Designs-Icon` directories within the installed `node_modules/@mayankjha07/modern-icons` package.
 
 1.  **Directly embed SVG:**
-    Copy the SVG code from the desired icon file (e.g., `activity.svg`) and paste it directly into your HTML.
+    Copy the SVG code from the desired icon file (e.g., `node_modules/@mayankjha07/modern-icons/icons/activity.svg`) and paste it directly into your HTML.
 
     ```html
     <!-- Example for activity.svg -->
@@ -57,10 +105,10 @@ For plain HTML projects, you can directly embed the SVG code or link to the SVG 
     ```
 
 2.  **Using `<img>` tag:**
-    You can also use the SVG files directly with an `<img>` tag. Ensure the path to the SVG file is correct.
+    You can also use the SVG files directly with an `<img>` tag. Ensure the path to the SVG file is correct relative to your project structure or build process.
 
     ```html
-    <img src="./path/to/icons/activity.svg" alt="Activity Icon" width="24" height="24" />
+    <img src="./node_modules/@mayankjha07/modern-icons/icons/activity.svg" alt="Activity Icon" width="24" height="24" />
     ```
 
 ## Contributing

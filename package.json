@@ -1,0 +1,59 @@
+{
+  "name": "@mayankjha07/modern-icons",
+  "version": "1.0.0",
+  "description": "A modern, open-source icon pack for web and app development.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "icons",
+    "Social-icons",
+    "System-Designs-Icon",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./social": {
+      "import": "./dist/social/index.mjs",
+      "require": "./dist/social/index.js",
+      "types": "./dist/social/index.d.ts"
+    },
+    "./system-designs": {
+      "import": "./dist/system-designs/index.mjs",
+      "require": "./dist/system-designs/index.js",
+      "types": "./dist/system-designs/index.d.ts"
+    },
+    "./icons/*": "./icons/*",
+    "./social/*": "./Social-icons/*",
+    "./system-designs/*": "./System-Designs-Icon/*"
+  },
+  "scripts": {
+    "build": "echo \"Build script goes here to convert SVGs to components and generate dist files\""
+  },
+  "keywords": [
+    "icons",
+    "svg",
+    "icon-pack",
+    "react",
+    "vite",
+    "html",
+    "modern",
+    "open-source"
+  ],
+  "author": "Mayank Jha",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flashcodes-themayankjha/Modern-Icon-Pack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/flashcodes-themayankjha/Modern-Icon-Pack/issues"
+  },
+  "homepage": "https://github.com/flashcodes-themayankjha/Modern-Icon-Pack#readme"
+}
