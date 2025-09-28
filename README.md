@@ -12,16 +12,20 @@ npm install @mayankjha07/modern-icons
 
 ## Usage
 
+This package is designed to be used with a build process that converts the raw SVG files into components (e.g., React components). The examples below assume such a build process is in place.
+
 ### Main Icons (React / Vite Projects)
 
-For React and Vite projects, you can import individual icons from the main pack as components:
+Main icons are organized by style (Outline, Filled, Colored). The existing icons are in the `Outline` style.
 
 1.  **Import the desired icon:**
 
     ```javascript
-    import { Activity } from '@mayankjha07/modern-icons';
-    // Or for a specific icon:
-    // import { Camera } from '@mayankjha07/modern-icons';
+    // For an outline icon (e.g., Activity)
+    import { Activity } from '@mayankjha07/modern-icons/icons/Outline';
+
+    // If Filled or Colored versions were available:
+    // import { Camera } from '@mayankjha07/modern-icons/icons/Filled';
     ```
 
 2.  **Use the icon as a component in your JSX:**
@@ -31,7 +35,6 @@ For React and Vite projects, you can import individual icons from the main pack 
       return (
         <div>
           <Activity width="24" height="24" color="blue" />
-          {/* <Camera width="32" height="32" strokeWidth="2" /> */}
         </div>
       );
     }
@@ -44,14 +47,16 @@ For React and Vite projects, you can import individual icons from the main pack 
 
 ### Social Icons (React / Vite Projects)
 
-To use social icons, import them from the `social` sub-path:
+Social icons are organized by style (Colored, Filled, Outline) and then by type (Normal, Badge, Round, Square).
 
 1.  **Import the desired social icon:**
 
     ```javascript
-    import { Facebook } from '@mayankjha07/modern-icons/social';
-    // Or for a specific icon:
-    // import { Instagram } from '@mayankjha07/modern-icons/social';
+    // For a normal colored Facebook icon
+    import { Facebook } from '@mayankjha07/modern-icons/social/Colored/Normal';
+
+    // For a round filled Facebook icon
+    // import { FacebookRoundFilled } from '@mayankjha07/modern-icons/social/Filled/Round';
     ```
 
 2.  **Use the icon as a component in your JSX:**
@@ -68,14 +73,16 @@ To use social icons, import them from the `social` sub-path:
 
 ### System Design Icons (React / Vite Projects)
 
-To use system design icons, import them from the `system-designs` sub-path:
+System design icons are organized by style (Coloured, Filled, Outline) and then by type (Normal, Badge, Round, Square).
 
 1.  **Import the desired system design icon:**
 
     ```javascript
-    import { CloudConnection } from '@mayankjha07/modern-icons/system-designs';
-    // Or for a specific icon:
-    // import { ServerConnection } from '@mayankjha07/modern-icons/system-designs';
+    // For a normal coloured CloudConnection icon
+    import { CloudConnection } from '@mayankjha07/modern-icons/system-designs/Coloured/Normal';
+
+    // For a badge coloured AddCloud icon
+    // import { AddCloudBadge } from '@mayankjha07/modern-icons/system-designs/Coloured/Badge';
     ```
 
 2.  **Use the icon as a component in your JSX:**
@@ -90,12 +97,16 @@ To use system design icons, import them from the `system-designs` sub-path:
     }
     ```
 
+### Dynamic Component Usage (Requires Build Process)
+
+To achieve dynamic usage like `<Instagram style="round" type="badge" />`, you would need a build process that generates a single component capable of resolving the correct SVG based on the `style` and `type` props. This package provides the organized SVG assets, and a build tool would be responsible for creating such dynamic components.
+
 ### HTML Projects (Direct SVG)
 
-For plain HTML projects, you can directly embed the SVG code or link to the SVG files. You can access the raw SVG files directly from the `icons`, `Social-icons`, and `System-Designs-Icon` directories within the installed `node_modules/@mayankjha07/modern-icons` package.
+For plain HTML projects, you can directly embed the SVG code or link to the SVG files. You can access the raw SVG files directly from the `icons`, `Social-icons`, and `System-Designs-Icon` directories within the installed `node_modules/@mayankjha07/modern-icons` package, following the new folder structure.
 
 1.  **Directly embed SVG:**
-    Copy the SVG code from the desired icon file (e.g., `node_modules/@mayankjha07/modern-icons/icons/activity.svg`) and paste it directly into your HTML.
+    Copy the SVG code from the desired icon file (e.g., `node_modules/@mayankjha07/modern-icons/icons/Outline/activity.svg`) and paste it directly into your HTML.
 
     ```html
     <!-- Example for activity.svg -->
@@ -108,7 +119,7 @@ For plain HTML projects, you can directly embed the SVG code or link to the SVG 
     You can also use the SVG files directly with an `<img>` tag. Ensure the path to the SVG file is correct relative to your project structure or build process.
 
     ```html
-    <img src="./node_modules/@mayankjha07/modern-icons/icons/activity.svg" alt="Activity Icon" width="24" height="24" />
+    <img src="./node_modules/@mayankjha07/modern-icons/icons/Outline/activity.svg" alt="Activity Icon" width="24" height="24" />
     ```
 
 ## Contributing

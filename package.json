@@ -19,16 +19,6 @@
       "require": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
-    "./social": {
-      "import": "./dist/social/index.mjs",
-      "require": "./dist/social/index.js",
-      "types": "./dist/social/index.d.ts"
-    },
-    "./system-designs": {
-      "import": "./dist/system-designs/index.mjs",
-      "require": "./dist/system-designs/index.js",
-      "types": "./dist/system-designs/index.d.ts"
-    },
     "./icons/*": "./icons/*",
     "./social/*": "./Social-icons/*",
     "./system-designs/*": "./System-Designs-Icon/*"
