@@ -129,3 +129,19 @@ We welcome contributions to the Modern Icon Pack! If you have new icon ideas, im
 ## License
 
 This icon pack is open-source and distributed under the [MIT License](https://opensource.org/licenses/MIT).
+
+### Future Improvement: Dynamic Component Usage Workflow
+
+To enable a more streamlined usage experience where icons can be imported once and their style/type dynamically controlled via props (e.g., `<Facebook style="filled" type="round" />`), a build workflow will be implemented.
+
+This workflow will involve:
+1.  **SVG to Component Transformation:** Using a tool (e.g., SVGR, Rollup/Webpack plugins) to convert the raw SVG files into React/Vue/Svelte components.
+2.  **Dynamic Variant Resolution:** Generating wrapper components that accept `style` and `type` props. These wrappers will internally resolve and render the correct SVG component based on the provided props and the organized folder structure.
+3.  **Bundling:** Bundling these components into a `dist/` directory, which will then be exposed via the `package.json` `exports`.
+
+This will allow users to import icons like:
+```javascript
+import { Facebook } from '@mayankjha07/modern-icons/social';
+// ...
+<Facebook style="filled" type="round" size="24" color="blue" />
+```
